@@ -1,0 +1,219 @@
+@import '../variables';
+
+.b-features {
+    background-image: url('../images/png/bckg.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 735px;
+    @include media-breakpoint-down (sm) {
+        background-image: none;
+    }
+    &__container {
+        max-width: 1110px;
+        margin: 0 auto;
+        display: grid;
+        gap: 90px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: min($numbers: 100px);
+        width: auto;
+        @include media-breakpoint-down (xl) {
+            row-gap: 90px;
+            column-gap: 32px;
+            padding: 0 64px;
+        }
+        @include media-breakpoint-down (lg) {
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 155px;
+            row-gap: 12px;
+        }
+        @include media-breakpoint-down (sm) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            row-gap: 54px;
+            padding: 0 24px;
+            text-align: center;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 37px;
+        color: #FFFFFF;
+        text-align: center;
+        @include media-breakpoint-down (sm) {
+            color: $color-main;
+        }
+        &_position {
+            padding: 75px 0 60px;
+            @include media-breakpoint-down (sm) { 
+               padding: 73px 0 58px;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        @include media-breakpoint-down (sm) {
+            display: inline-block;
+            path {
+                fill: $color-accent;
+            }
+        }
+        &_position1 {
+            margin-top: 0;
+            margin-left: 0;
+        }
+        &_position2 {
+            margin-top: -1px;
+            margin-left: 2px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: 3px;
+                margin-left: 0px;
+            }
+        }
+        &_position3 {
+            margin-top: 0px;
+            margin-left: 3px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: 3px;
+                margin-left: 0px;
+            }
+        }
+        &_position4 {
+            margin-top: 0px;
+            margin-left: 7px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: 5px;
+                margin-left: 2px;
+            }
+        }
+        &_position5 {
+            margin-top: -2px;
+            margin-left: 2px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: 3px;
+                margin-left: -2px;
+            }
+        }
+        &_position6 {
+            margin-top: -1px;
+            margin-left: 2px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: 4px;
+                margin-left: 2px;
+            }
+        }
+        &_position7 {
+            margin-top: 2px;
+            margin-left: 4px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: -1px;
+                margin-left: -2px;
+            }
+        }
+        &_position8 {
+            margin-top: 9px;
+            margin-left: 1px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: 7px;
+                margin-left: 0;
+            }
+        }
+        &_position9 {
+            margin-top: 6px;
+            margin-left: 2px;
+            @include media-breakpoint-down (sm) { 
+                margin-top: 4px;
+                margin-left: 0px;
+            } 
+        }
+    }
+    &__text {
+        width: 311px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 23px;
+        color: #FFFFFF;
+        @include media-breakpoint-down (xl) {
+            width: auto;
+        }
+        @include media-breakpoint-down (sm) {
+            color: $color-light;
+        }
+        &_position1 {
+            margin-top: 14px;
+            margin-left: -1px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 11px;
+                margin-left: 0;
+            }
+        }
+        &_position2 {
+            margin-top: 12px;
+            margin-left: -1px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 9px;
+                margin-left: 2px;
+            }
+        }
+        &_position3 {
+            margin-top: 14px;
+            margin-left: -3px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 11px;
+                margin-left: 0;
+            }
+        }
+        &_position4 {
+            margin-top: 13px;
+            margin-left: -2px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+        &_position5 {
+            margin-top: 11px;
+            margin-left: 0px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 8px;
+            }
+        }
+        &_position6 {
+            margin-top: 13px;
+            margin-left: -3px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 10px;
+                margin-left: 1px;
+            }
+        }
+        &_position7 {
+            margin-top: 5px;
+            margin-left: -1px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 2px;
+                margin-left: 0;
+            }
+        }
+        &_position8 {
+            margin-top: 12px;
+            margin-left: -1px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 9px;
+                margin-left: 0px;
+            }
+        }
+        &_position9 {
+            margin-top: 9px;
+            margin-left: -3px;
+            @include media-breakpoint-down (sm) {
+                margin-top: 6px;
+                margin-left: 0;
+            }
+        }
+    }
+    &__dot {
+        @include media-breakpoint-down (sm) {
+            display: none;
+        }
+    }
+}

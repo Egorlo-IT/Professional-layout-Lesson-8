@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('./bootstrap/bootstrap-grid.css');
+@import './bootstrap/scss/functions';
+@import './bootstrap/scss/variables';
+@import './bootstrap/scss/mixins/breakpoints';
+@import './variables';
+@import './blocks/header';
+@import './blocks/blockWhatItDoes';
+@import './blocks/blockGetStarted';
+@import './blocks/blockFeatures';
+@import './blocks/blockWhatOurUsersSay';
+@import './blocks/blockBrands';
+@import './blocks/blockBottom';
+@import './blocks/footer';
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato/Lato-Regular.ttf) format('ttf'), url(../fonts/Lato/Lato-Regular.woff) format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato/Lato-Italic.ttf) format('ttf'), url(../fonts/Lato/Lato-Italic.woff) format('woff');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato/Lato-Bold.ttf) format('ttf'), url(../fonts/Lato/Lato-Bold.woff) format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato/Lato-Heavy.ttf) format('ttf'), url(../fonts/Lato/Lato-Heavy.woff) format('woff');
+    font-weight: 900;
+}
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+  }
+
+body {
+    color: $color-main;
+    font-family:'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p, a {
+    font-size: 17px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1115px;
+    margin: 0 auto;
+}
+
+
+[hidden] {
+    visibility: hidden;
+}
+
+.wrap {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: auto;
+}
+
+header {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+
+// @include media-breakpoint-down(lg) {
+//     .container {
+//         padding-right: unset;
+//         padding-left: unset;
+//         width: auto;
+//     }
+
+// }
+
+

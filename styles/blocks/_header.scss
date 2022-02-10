@@ -1,0 +1,101 @@
+@import '../variables';
+
+.b-header {
+    background-color: $color-bckg;
+    background-image: url("../images/png/bckg-mobiles.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    min-height: 665px;
+    @include media-breakpoint-down(xl) { 
+        padding-left: 30px;
+        background-position-x: 33vw;
+    }
+    @include media-breakpoint-down(md) { 
+        min-height: 525px;
+        padding-left: unset;
+        background-image: none;
+    }
+    &__container {
+        max-width: 1115px;
+        margin: 0 auto;
+    }
+    &__logo {
+        &_position {
+            margin-top: 61px;
+        }
+        @include media-breakpoint-down(md) { 
+            margin: 32px auto;
+        }
+    }
+    &__title {
+        width: 546px;
+        height: 96px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 47.45px;
+        letter-spacing: 0.03em;
+        &_position {
+            padding-top: 136px;
+            @include media-breakpoint-down(md) { 
+                padding-top: 55px;
+            }
+        }
+        @include media-breakpoint-down(md) { 
+            width: auto;
+            height: 119px;
+            font-size: 30px;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+    &__text {
+        width: 453px;
+        height: 52px;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-light;
+        &_position {
+            padding-top: 25px;
+            padding-bottom: 52px;
+            @include media-breakpoint-down(md) { 
+                padding: 29px 20px 0;
+            }
+        }
+        @include media-breakpoint-down(md) { 
+            width: auto;
+            height: 70px;
+            font-size: 16px;
+            line-height: 23px;
+            text-align: center;
+        }
+    }
+    &__downloadBlock {
+        display: flex;
+        @include media-breakpoint-down(md) { 
+            justify-content: center;
+        }
+        &_position {
+            @include media-breakpoint-down(md) { 
+            padding-top: 53px;
+            }
+        }
+    }
+    &__item {
+        cursor: pointer;
+        &_paddingRight {
+            padding-right: 34px;
+            @include media-breakpoint-down(md) { 
+                padding-right: 26px;
+            }
+        }
+    }
+    &__img {
+        @include media-breakpoint-down(md) { 
+            width: 147px;
+        }
+
+        @media screen and (max-width: 359px) {
+            width: 125px;
+        }
+    }
+}
