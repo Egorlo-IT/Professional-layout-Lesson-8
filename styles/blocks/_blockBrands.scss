@@ -1,0 +1,76 @@
+@import '../variables';
+
+.b-brandsBlock {
+    background: #FAFAFA;
+    min-height: 278px;
+    padding: 0 20px;
+    @include media-breakpoint-down (sm) {
+        padding: 99px 20px 71px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 37px;
+        &_position {
+            text-align: center;
+            padding-top: 56px;
+            @include media-breakpoint-down (sm) {
+                padding: 0;
+            }
+        }
+    }
+    &__items {
+        display: flex;
+        width: 1160px;
+        &_position {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            padding-top: 58px;
+            @include media-breakpoint-down (lg) {
+                width: auto;
+                padding-top: 43px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__image {
+        @include media-breakpoint-down (lg) {
+            flex-wrap: wrap;
+            &_position1 {
+            }
+            &_position2 {
+
+            }
+            &_position3 {
+
+                // padding-left: 20px;
+                padding-top: 20px;
+            }
+            &_position4 {
+                // padding-left: 39px;
+                // padding-top: 20px;
+            }
+            &_position5 {
+                // padding-left: 39px;
+                // padding-top: 20px;
+            }
+            &_position6 {
+                @include media-breakpoint-down (lg) {
+                    margin: 0 auto;
+                    padding-top: 40px;
+                }
+               
+            }
+        }
+    }
+    &__break {
+        display: none;
+        @include media-breakpoint-down (lg) {
+            display: flex;
+            flex-basis: 100%;
+        }
+    }
+}

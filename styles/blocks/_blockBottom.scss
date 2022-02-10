@@ -1,0 +1,114 @@
+@import '../variables';
+
+.b-bottomBlock {
+    display: grid;
+    min-height: 482px;   
+    &_position {
+        padding-top: 2px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "block-1 block-2";
+        @include media-breakpoint-down (lg) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: 400px;
+            grid-template-areas: "block-2" "block-1";
+            &__block1 {
+                grid-area: block-1;
+            }
+            &__block2 {
+                grid-area: block-2;
+            }
+        }
+        @include media-breakpoint-down (sm) {
+            grid-template-columns: 100%;
+            grid-auto-rows: 348px;
+        }
+    }
+    &__block1 {
+        grid-area: block-1;
+        background-image: url("../images/png/mobile-1.png");
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: 32px;
+        @include media-breakpoint-down (xl) {
+            background-position-x: -201px;
+            background-position-y: 33px;
+        }
+        @include media-breakpoint-down (lg) {
+            background-image: url("../images/png/mobile-1-xs.png");
+            background-position-x: 0px;
+            background-position-y: 140px;
+        }
+        @include media-breakpoint-down (sm) {
+            background-position-y: 86px;
+        }
+        
+    }
+    &__block2 {
+        grid-area: block-2;
+        &_position {
+            padding-top: 101px;
+            padding-left: 23px;
+            @include media-breakpoint-down (lg) {
+                width: auto;
+                padding: 50px;
+                text-align: center;
+            }
+            @include media-breakpoint-down (sm) {
+                padding: 17px 20px;
+            }
+            @media screen and (max-width: 359px) {
+                width: 100%;
+                padding: 3px;
+            }
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 37px;
+        &_position {
+            padding-bottom: 33px;
+            @include media-breakpoint-down (sm) {
+                padding-bottom: 13px;
+            }
+        }
+    }
+    &__text {
+        width: 535px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #4F4F4F;
+        @include media-breakpoint-down (lg) {
+            width: auto;
+        }
+        @include media-breakpoint-down (sm) {
+            padding: 0 16px;
+
+        }
+    }
+    &__downloadBlock {
+        display: flex;
+        &_position {
+            padding-top: 41px;
+            @include media-breakpoint-down (lg) {
+                justify-content: center;
+            }
+        }
+    }
+    &__item {
+        &_paddingRight {
+            padding-right: 34px;
+            @include media-breakpoint-down (sm) {
+                padding-right: 28px;
+            }
+        }
+    }
+
+    &__img {
+        @include media-breakpoint-down (sm) {
+            width: 145.69px;
+        }
+    }
+
+}

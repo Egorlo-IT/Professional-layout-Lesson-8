@@ -1,0 +1,106 @@
+@import '../variables';
+
+.b-footer {
+    min-height: 127px;
+    background-color: $color-accent;
+    grid-template-areas: 
+    "logo nav socialGroup";
+    &__logo {
+        grid-area: logo;
+    }
+    &__nav {
+        grid-area: nav;
+    }
+    &__socialGroup {
+        grid-area: socialGroup;
+    }
+    @include media-breakpoint-down (sm) {
+        grid-template-areas: 
+        "logo"
+        "socialGroup"
+        "nav";
+        &__logo {
+            grid-area: logo;
+        }
+        &__nav {
+            grid-area: nav;
+        }
+        &__socialGroup {
+            grid-area: socialGroup;
+        }
+    }
+    &_position {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1fr;
+        @include media-breakpoint-down (sm) {
+            grid-auto-rows: 24px;
+            grid-template-columns: 1fr;
+            padding: 44px 20px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    &__img {
+        &_position {
+            margin-left: 163px;
+            @include media-breakpoint-down (sm) {
+                margin: 0;
+            }
+        }
+    }
+    &__nav {
+        grid-area: nav;
+        display: flex;
+        align-items: center;
+        &_position {
+            margin-left: 53px;
+            margin-top: -3px;
+            @include media-breakpoint-down (sm) {
+                margin: 0;
+            }
+        }
+    }
+    &__link {
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 21px;
+        &_position {
+            padding-right: 37px;
+            @include media-breakpoint-down (sm) {
+                margin: 0;
+                padding-right: 19px;
+                padding-top: 95px;
+            }
+        }
+    }
+    &__socialGroup {
+        grid-area: socialGroup;
+        display: flex;
+        align-items: center;
+        &_position {
+            margin-left: 49px;
+            @include media-breakpoint-down (sm) {
+                margin: 0;
+                padding-top: 28px;
+            }
+        }
+    }
+    &__socialIcon {
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        &_position {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 17px;
+        }
+    }
+
+}
